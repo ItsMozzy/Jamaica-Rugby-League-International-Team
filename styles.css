@@ -1,0 +1,75 @@
+.rubik-glitch-regular {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title-img{ 
+    object-fit: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity:60%;
+}
+
+.title-img-border{
+    aspect-ratio: 3/1;
+    width: 100%;
+
+    font-size: 20px; 
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+}
+.title-page{
+    margin:0px;
+    font-family: "Rubik Glitch";
+    
+}
+body{
+    font-family: "Rubik Glitch";
+    margin: 0;
+    background-color: black;
+}
+.title-text{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top: 42%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #fff; 
+  padding: 10px 20px; 
+  text-align: center;
+  font-size: 12vw;
+  text-shadow: 3px 0px 1px black;
+}
+
+.strip{
+    background-color: #ddd;
+    aspect-ratio: 40/1;
+    width: 100%;
+    border: none;
+}
+.hero{
+    border: none;
+    aspect-ratio: 20/1;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin:0;
+    width:100%
+}
+.logo{
+    border: none;
+    height:100%;
+    width: auto;
+}
+
+.hero button{
+    font-family: "Rubik Glitch";
+    font-size:2.2Vw ;
+    background-color: white;
+    border:none;
+}

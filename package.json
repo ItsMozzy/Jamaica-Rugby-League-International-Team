@@ -1,0 +1,12 @@
+{
+  "name": "Scrim-s01rias",
+  "description": "https://scrimba.com/learn-javascript-c0v/~037/s01klilu4n/head",
+  "scripts": {
+    "watch": "webpack -w",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "webpack": "^2.0"
+  },
+  "devDependencies": {}
+}
