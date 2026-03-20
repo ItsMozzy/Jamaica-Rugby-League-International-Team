@@ -164,7 +164,7 @@ button:hover{
 .about-text{
     font-size: 2.em;
     font-weight: bold;
-    display:block;  
+    display:block; 
 }
 
 
@@ -222,7 +222,7 @@ button:hover{
     justify-self: center;
     border-radius: 10px;
     width: fit-content;
-    min-width: 310px;
+    min-width: 350px;
     margin: 50px 50px;
     display: flex;
     justify-content: space-evenly;
@@ -256,16 +256,16 @@ button:hover{
 
 .about-info{
     align-self: center;
-    justify-self: center;
     font-size: 100%;
     line-height: 1.2em;
     font-family: sans-serif;
-    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 
 .page-info button{
-    margin-top: 50px;
+    margin-top: 20px;
     height: 50px;
     font-size: 1.2em;
     max-width: 100%;
@@ -290,6 +290,9 @@ button:hover{
 
 
 @media screen and (max-width:780px){
+    .page-info button{
+        margin-top: 0px;
+    }
     .home-btn,.about-btn,.team-btn,.sponsor-btn{
         display:none;
     }
@@ -297,6 +300,11 @@ button:hover{
         display:inline;
         padding: 3px 10px;
         font-size: 1em;
+    }
+
+    .about-text{
+        margin-top:5px;
+        margin-bottom: 5px;
     }
 
     .page-info{
@@ -308,6 +316,9 @@ button:hover{
 
     }
 
+    .page-photo-img{
+        margin-top: 20px;
+    }
 
     .hero{
         justify-content: space-between;
@@ -327,6 +338,14 @@ button:hover{
         -webkit-appearance: none;
     }
 }
+
+@media screen and (max-width:380px){
+    .page-container{
+        min-width: 310px;
+}
+}
+
+
 @media screen and (min-width:781px){
     .hero-text,.hero-text-container,.menu-icon{
         display:none;
