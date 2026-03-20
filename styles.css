@@ -1,9 +1,3 @@
-.rubik-glitch-regular {
-  font-family: "Rubik Glitch", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .home-img, .team-bg{ 
     object-fit: cover;
     display: block;
@@ -30,23 +24,22 @@
 }
 
 body{
-    scrollbar-gutter: stable;
     font-family: "Oswald", sans-serif;
     margin: 0;
     background-color: black;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-width: none;
 }
+
+
 .home-text, .team-text{
   position: absolute;
   width:100%;
   height:100%;
-  top: 50%; 
+  top: 40%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  color: #fff; 
-  padding: 10px 20px; 
+  color: #fff;  
   text-align: center;
   font-size: 12vw;
   font-weight: bolder;
@@ -54,6 +47,7 @@ body{
 }
 
 .team-text{
+    top: 50%;
     font-size: 2.5em;
     background: linear-gradient(90deg, yellow, green);
     -webkit-background-clip: text;
@@ -225,7 +219,10 @@ button:hover{
 }
 
 .page-container{
+    justify-self: center;
+    border-radius: 10px;
     width: fit-content;
+    min-width: 310px;
     margin: 50px 50px;
     display: flex;
     justify-content: space-evenly;
@@ -291,6 +288,7 @@ button:hover{
     color: var(--text-hover);
 }
 
+
 @media screen and (max-width:780px){
     .home-btn,.about-btn,.team-btn,.sponsor-btn{
         display:none;
@@ -323,6 +321,10 @@ button:hover{
     }
     .team-text,.sponsor-text{
         font-size: 1.5em;
+    }
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
     }
 }
 @media screen and (min-width:781px){
