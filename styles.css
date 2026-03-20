@@ -286,6 +286,11 @@ button:hover{
     color: var(--text-hover);
 }
 
+.page-info button:active{
+    background-color: goldenrod;
+    color: var(--text-hover);
+}
+
 @media screen and (max-width:780px){
     .home-btn,.about-btn,.team-btn,.sponsor-btn{
         display:none;
