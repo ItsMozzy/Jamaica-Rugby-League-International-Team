@@ -1,13 +1,88 @@
+h2{
+    margin-top: 150px;
+}
+
+.sponsor-carousel{
+    margin-left: auto;
+    margin-right: auto;
+	background: white;
+	position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.sponsor-carousel::before, .sponsor-carousel::after{
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    content: "";
+    height: 120px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.sponsor-carousel::after{
+    right: 0;
+    top:0;
+    transform: rotateZ(180deg);
+}
+
+.sponsor-carousel::before{
+    left: 0;
+    top:0;
+}
+
+.sponsor-carousel .carousel-track {
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+    display: flex;
+    gap:150px;
+}
+
+.carousel-img{
+    align-content: center;
+    justify-content: center;
+    width: 250px;
+    flex-shrink: 0;
+}
+.carousel-img img:hover{
+    transform: scale(1.05);
+}
+
+.carousel-img img {
+    justify-self: center;
+    align-content: center;
+    max-height: 120px;
+    width: 250px;
+    object-fit: contain;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 4 - 150px * 4));
+    }
+}
+
+.home-page{
+    margin-top:77px;
+}
+
 .home-img, .team-bg{ 
     object-fit: cover;
     display: block;
     height: 100%;
     width: 100%;
-    opacity: 0.8;
 }
 
-.home-page{
-    margin-top:77px;
+#home-team{
+    object-position: 0% 34%;
+}
+#home-about{
+    object-position: 0% 23%;
 }
 
 .home-page,.team-page,.about-page,.sponsor-page{
@@ -32,7 +107,7 @@ body{
 }
 
 
-.home-text, .team-text{
+.home-text{
   position: absolute;
   width:100%;
   height:100%;
@@ -46,18 +121,6 @@ body{
   text-shadow: 3px 0px 1px black;
 }
 
-.team-text{
-    top: 50%;
-    font-size: 2.5em;
-    background: linear-gradient(90deg, yellow, green);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    text-shadow: none;
-    font-weight: bolder;
-}
-
 .strip, .footer{
     background-color: #ddd;
     width: 100%;
@@ -69,8 +132,79 @@ body{
 }
 
 .footer{
-    aspect-ratio: 8/1;
+    display: block;
+    height: 300px;
+    color:#444;
 }
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap:120px;
+    height: fit-content;
+    margin-bottom: 37px;
+}
+
+.footer h4{
+    display: block;
+    justify-self: center;
+    align-self: self-end;
+}
+
+#contact p{
+    margin-top: 0px;
+}
+
+.socials{
+
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 60px;
+    display:flex;
+    height:fit-content;
+    flex-direction: column;
+}
+
+.socials img{
+    opacity: 80%;
+    height:30px;
+}
+
+.socials .email{
+    margin-left: 9px;
+    height:14px;
+    opacity: 60%;
+    padding-top:7px;
+}
+
+
+.socials a{
+    padding-top: 5px;
+    text-align: center;
+    color: #444;
+    text-decoration: none;
+}
+
+.socials a:hover{
+    transform: scale(1.2);
+    text-align: center;
+    color: #444;
+    text-decoration: none;
+}
+.socials a:hover ~ img{
+    transform: scale(1.2);
+}
+
+.socials h3{
+    text-decoration: underline;
+}
+
+.footer-img-link{
+    display:flex;
+    align-content: center;
+    gap: 8px;
+}
+
 
 .hero{
     border: none;
@@ -146,28 +280,70 @@ button:hover{
 }
 
 
+.sponsor-page{
+    height: 1000px;
+}
+
+
 .team-page{
     text-align: center;
-    height: 600px;
-    width: 100%;
+    height: fit-content;
+    background-image: url('images/jamaica-kit.png');
+    background-size: cover;
+}
+
+#team-container{
+    background-color: #FFDA3B;
+}
+
+.team-header{
+    color: #15522B;
+    text-shadow: none;
+}
+
+.team-text{
+    color: #15522B;
+    text-shadow: 1px 1px 1px #15522B;
+}
+
+.about-text,.team-text,.back-link{
+    align-self: center;
+    font-size: 100%;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.back-link{
+    display: none;
+    color:#000000;
+    font-family: "Oswald", sans-serif;
+    font-weight: 00;
 }
 
 .about-page{
     height:fit-content;
     background-color: #FFDA3B;
 }
-.sponsor-page{
-    height: 1000px;
-}
 
 
-.about-text{
-    font-size: 2.em;
-    font-weight: bold;
+.about-header,.team-header{
+    font-size: 2em;
+    font-weight: bolder;
     display:block; 
 }
 
+.back{
+    justify-self: left;
+    padding-top:15px;
+    background-color: #fff;
+}
 
+#about{
+    background-color: #fff;
+    height: 100%;
+}
 
 .navbar{
     position: fixed; 
@@ -189,20 +365,8 @@ button:hover{
     font-family:"Oswald", sans-serif ;
     font-size: 0.9rem;
     color: black;
-
     margin-top:-1px;
     margin-bottom: -1px;
-}
-
-.back-link{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #000000;
-    padding-left: 20px;
-    font-size: 2.2vw;
-}
-.back{
-    padding-top:15px;
-    background-color: #fff;
 }
 
 .menu-icon{
@@ -219,6 +383,7 @@ button:hover{
 }
 
 .page-container{
+    max-height: 800px;
     justify-self: center;
     border-radius: 10px;
     width: fit-content;
@@ -232,11 +397,15 @@ button:hover{
 }
 
 
+.page-photo{
+    max-height: inherit;
+}
+
 .page-photo-img{
     min-height: 300px;
-    width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    width: 100%;
 }
 
 .page-info{
@@ -250,21 +419,13 @@ button:hover{
     text-shadow: 1px 1px 1px #000000;
 }
 
-#page-text{
+.page-text{
     flex-grow: 0.5;
 }
 
-.about-info{
-    align-self: center;
-    font-size: 100%;
-    line-height: 1.2em;
-    font-family: sans-serif;
-    padding-right: 20px;
-    padding-left: 20px;
-}
 
 
-.page-info button{
+.page-btn{
     margin-top: 20px;
     height: 50px;
     font-size: 1.2em;
@@ -274,37 +435,56 @@ button:hover{
     color: #15522B;
     border:none;
     padding: 10px 20px;
+    padding-bottom: 45px;
     margin-bottom: 25px;
-    transition: background-color 0.4s ease-out, color 0.6s ease-out;
+    transition: background-color 0.4s ease-out, color 0.4s ease-out;
 }
 
-.page-info button:hover{
+.page-btn:hover{
     background-color: goldenrod;
     color: var(--text-hover);
 }
 
-.page-info button:active{
+.page-btn:active{
     background-color: goldenrod;
     color: var(--text-hover);
 }
+
+.green-btn{
+    color:gold;
+    background-color: #15522B;
+}
+
+.green-btn:hover{
+    background-color: forestgreen;
+    color: var(--text-hover);
+}
+
+.green-btn:active{
+    background-color: forestgreen;
+    color: var(--text-hover);
+}
+
 
 
 @media screen and (max-width:780px){
-    .page-info button{
-        margin-top: 0px;
-    }
-    .home-btn,.about-btn,.team-btn,.sponsor-btn{
-        display:none;
-    }
-    #about-btn{
-        display:inline;
+    .page-btn{
+        margin-top: 30px;
+        display: inline;
         padding: 3px 10px;
         font-size: 1em;
     }
+    .hero button{
+        display:none;
+    }
 
-    .about-text{
+    .about-text,.team-text{
         margin-top:5px;
         margin-bottom: 5px;
+    }
+
+    .back-link{
+        display: inline;
     }
 
     .page-info{
@@ -312,6 +492,7 @@ button:hover{
     }
 
     .page-container{
+        max-height: fit-content;
         flex-direction: column;
 
     }
@@ -330,12 +511,13 @@ button:hover{
     .navbar-container{
         margin-left: 20px;
     }
-    .team-text,.sponsor-text{
-        font-size: 1.5em;
-    }
 
     ::-webkit-scrollbar {
         -webkit-appearance: none;
+    }
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #ccc #fff;
     }
 }
 
